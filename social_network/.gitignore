@@ -1,0 +1,11 @@
+.project
+.settings
+/DaoLayer/.project
+/DaoLayer/target
+/DaoLayer/.settings
+/PresentationLayer/target
+/PresentationLayer/.project
+/PresentationLayer/.settings
+/ServiceLayer/target
+/ServiceLayer/.project
+/ServiceLayer/.settings

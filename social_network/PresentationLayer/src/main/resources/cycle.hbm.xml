@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="fr.unicaen.am.model.Cycle">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="dateCreation"></property>
+		<many-to-one name="userService" class="fr.unicaen.am.model.UserService" />
+
+	</class>
+</hibernate-mapping>

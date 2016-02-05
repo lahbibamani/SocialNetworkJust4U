@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fr.unicaen.am.model">
+
+  <class name="Echange" table="echange">
+    <id name="id" column="id">
+    	<generator class="increment"/>
+    </id>
+    <property name="accepted" />
+    <many-to-one name="service" class="domain.service.Service"/>
+    <many-to-one name="offrant" class="fr.unicaen.am.model.User"/>
+    <many-to-one name="demandeur" class="fr.unicaen.am.model.User"/>
+    <many-to-one name="cycle" class="fr.unicaen.am.model.Cycle"/>
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+social_network/.project
+social_network/.settings
+social_network/DaoLayer/.project
+social_network/DaoLayer/target
+social_network/DaoLayer/.settings
+social_network/PresentationLayer/target
+social_network/PresentationLayer/.project
+social_network/PresentationLayer/.settings
+social_network/ServiceLayer/target
+social_network/ServiceLayer/.project
+social_network/ServiceLayer/.settings
+chat/target
+Person/target
+Service/target

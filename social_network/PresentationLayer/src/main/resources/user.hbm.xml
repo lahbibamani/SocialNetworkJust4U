@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="fr.unicaen.am.model.User">
+        <id name="email" type="string">
+            <column name="email" length="45" />
+        </id>
+        <property name="name"></property>
+        <property name="firstName"></property>
+        <property name="password" type="string">
+            <column name="password" length="60" not-null="true" />
+        </property>
+        <property name="enabled" type="boolean">
+            <column name="enabled" not-null="true" />
+        </property>
+        <property name="birth"></property>
+        <property name="img"></property>
+        <property name="pays" type="string">
+            <column name="pays" length="60" not-null="true" />
+        </property>
+        <property name="ville" type="string">
+            <column name="ville" length="60" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" not-null="false" />
+        </property>
+        <property name="phoneType" type="string">
+            <column name="phoneType" not-null="true" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" not-null="true" />
+        </property>
+        <property name="adress" type="string">
+            <column name="adress" length="60" not-null="true" />
+        </property>
+        <set name="userRole" table="user_roles"  cascade="delete" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="email" length="45" not-null="true" />
+            </key>
+            <one-to-many class="fr.unicaen.am.model.UserRole" />
+        </set>
+    </class>
+</hibernate-mapping>

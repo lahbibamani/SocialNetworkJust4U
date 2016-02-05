@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="fr.unicaen.am.model">
+
+	<class name="UserService" table="service_user">
+		<id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		<many-to-one name="person" class="fr.unicaen.am.model.User" />
+		<many-to-one name="service" class="domain.service.Service" />
+		<property name="typeService" not-null="true">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">
+					fr.unicaen.am.model.TypeService
+				</param>
+			</type>
+		</property>
+		<property name="startDate" type="date" />
+		<property name="endDate" type="date" />
+		<property name="creationDate" type="date" />
+
+	</class>
+
+</hibernate-mapping>

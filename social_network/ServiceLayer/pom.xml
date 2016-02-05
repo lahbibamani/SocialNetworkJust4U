@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>fr.unicaen.am.web_app</groupId>
+		<artifactId>social-network</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>service-layer</artifactId>
+	<name>ServiceLayer</name>
+	<description>Service Layer</description>
+
+	<properties>
+		<spring.security.version>3.2.3.RELEASE</spring.security.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>fr.unicaen.am.web_app</groupId>
+			<artifactId>dao-layer</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>fr.unicaen.am.domain</groupId>
+			<artifactId>service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>fr.unicaen.am.domain</groupId>
+			<artifactId>person</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>3.2.0.RELEASE</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

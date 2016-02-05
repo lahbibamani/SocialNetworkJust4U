@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="fr.unicaen.am.model.Comment">
+        <id name="id" column="id">
+			<generator class="increment" />
+		</id>
+		
+		<many-to-one name="sender" class="fr.unicaen.am.model.User"/>
+		<many-to-one name="receiver" class="fr.unicaen.am.model.User"/>
+		<many-to-one name="userService" class="fr.unicaen.am.model.UserService"/>
+        <property name="content"></property>
+        <property name="datePost"></property>
+    </class>
+</hibernate-mapping>
