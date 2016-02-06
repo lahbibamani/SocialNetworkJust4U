@@ -73,17 +73,21 @@ $(document)
 							myRegexp = /(?:^|\s)firstName=(.*?),(?:\s|$)/g;
 							var firstName = myRegexp.exec($("#role").val())[1];
 						}
+						if (!img) {
+							var myRegexp = /(?:^|\s)img=(.*?)(?:\s|$)/g;
+							var img = myRegexp.exec($("#role").val())[1];
+						}
 
 						$(
 								' <div class="chat-message"><div class="sender pull-right"><div class="icon">'
-										+ '<img src="resources/img/avatars/5.png" class="img-circle" alt="">'
+										+ '<img src="resources/img/avatars/'+img+'.png" class="img-circle" alt="">'
 										+ '</div><div class="time">'
 										+ "3 sec"
 										+ '</div></div>'
 										+ '<div class="chat-message-body on-left">'
 										+ '<span class="arrow"></span><div class="sender">'
 										+ '<a href="#">'
-										+ +name + " " + firstName
+										+ name + " " + firstName
 										+ '</a></div>' + '<div class="text">'
 										+ val + '</div></div></div>')
 								.insertBefore(el);
